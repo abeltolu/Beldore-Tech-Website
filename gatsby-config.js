@@ -1,8 +1,8 @@
 module.exports = {
     siteMetadata: {
-        title: `Gatsby Default Starter`,
-        description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-        author: `@gatsbyjs`,
+        title: `Beldore Technologies`,
+        description: `We create and build thoughtful digital experiences for the modern world. As a full-service digital agency, we work closely with our clients to define, design and develop transformative user experiences across all platforms and brand’s touchpoints.`,
+        author: `@abeltolu`,
     },
     plugins: [
         `gatsby-plugin-react-helmet`,

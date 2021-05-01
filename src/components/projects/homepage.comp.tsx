@@ -97,7 +97,8 @@ const HomePageProjects = () => {
     return (
         <StRoot
             autoPlay
-            swipeable
+            interval={5000}
+            selectedItem={2} //default to 3rd item in list
             showThumbs={false}
             showArrows={false}
             showStatus={false}

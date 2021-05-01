@@ -90,7 +90,7 @@ const FooterLinks: React.FC<IFooterLinkSection> = ({ title, links }) => {
             <div className="links">
                 {links
                     ? links.map((link, index) => (
-                          <Link to={link.url} className="link">
+                          <Link key={index} to={link.url} className="link">
                               {link.title}
                           </Link>
                       ))
