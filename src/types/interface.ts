@@ -12,3 +12,12 @@ export interface ISVGProps {
     height?: number;
     fill?: string;
 }
+
+export interface IProjectProps {
+    key: number | string;
+    title: string;
+    description: string;
+    imagePath: string;
+    tags: string[];
+    bgColor?: string;
+}

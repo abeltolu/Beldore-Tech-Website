@@ -3,6 +3,7 @@ import Fonts from './fonts';
 import TransitionStyles from './transitionStyles';
 import { transparentize } from 'polished';
 import ButtonStyles from './buttonStyles';
+import TextStyles from './textStyles';
 
 const GlobalStyle = createGlobalStyle`
     ${Fonts}
@@ -21,6 +22,7 @@ const GlobalStyle = createGlobalStyle`
         --fz-lg: 20px;
         --fz-22: 22px;
         --fz-xl: 24px;
+        --fz-36: 36px;
         --fz-xxl: 48px;
         --fz-56: 56px;
         --nav-height: 120px;
@@ -85,8 +87,16 @@ const GlobalStyle = createGlobalStyle`
             color: var(--green);
         }
     }
+
+    h2.section-title {
+        font-size: var(--fz-xxl);
+        font-weight: 500;
+        line-height: 1.3;
+        color: var(--black);
+    }
     
     ${ButtonStyles}
+    ${TextStyles}
     ${TransitionStyles}
 `;
 

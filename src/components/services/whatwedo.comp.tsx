@@ -6,7 +6,7 @@ import ArrowLeftIcon from '../icons/arrowleft';
 const WhatWeDo = () => {
     return (
         <StWrapper>
-            <h2 className="title">What We Do</h2>
+            <h2 className="section-title">What We Do</h2>
             <p className="content">
                 At Beldore, We build custom software that allows businesses to
                 meet their needs and constraints. we serve as a strategic
@@ -16,7 +16,7 @@ const WhatWeDo = () => {
             </p>
             <Link
                 to="/services"
-                className="button button--shadow-green our-services"
+                className="button button--shadow-green button--underlined text-black"
             >
                 <span className="text">Our Services</span>
                 <ArrowLeftIcon />
@@ -42,18 +42,6 @@ const StWrapper = styled.div`
         font-style: normal;
         line-height: 1.5;
         color: var(--light-black);
-    }
-
-    a.our-services {
-        display: flex;
-        align-items: center;
-        span.text {
-            font-size: var(--fz-xl);
-            font-weight: 500;
-            line-height: 1.5;
-            color: var(--black);
-            margin-right: 8px;
-        }
     }
 `;
 

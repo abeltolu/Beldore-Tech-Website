@@ -10,6 +10,8 @@ import { HomePageServices } from '../components/services/homepage.comp';
 import { servicesList } from '../config';
 import WhatWeDo from '../components/services/whatwedo.comp';
 import HomePageHero from '../components/homepage/hero.comp';
+import ProjectsHeader from '../components/homepage/projectsheader.comp';
+import HomePageProjects from '../components/projects/homepage.comp';
 
 const IndexPage = () => (
     <Layout>
@@ -22,6 +24,10 @@ const IndexPage = () => (
             <WhatWeDo />
             <HomePageServices services={servicesList} />
         </ServicesSection>
+        <ProjectsSsection>
+            <ProjectsHeader />
+            <HomePageProjects />
+        </ProjectsSsection>
     </Layout>
 );
 
@@ -42,6 +48,13 @@ const ServicesSection = styled.section`
     display: grid;
     grid-template-columns 440px 1fr;
     grid-gap: 70px;
+`;
+
+const ProjectsSsection = styled.section`
+    width: 100%;
+    height: 100vh;
+    background: var(--white);
+    position: relative;
 `;
 
 export default IndexPage;
