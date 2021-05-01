@@ -21,3 +21,12 @@ export interface IProjectProps {
     tags: string[];
     bgColor?: string;
 }
+
+export interface IFooterLinkSection {
+    title: string;
+    links: IFooterLink[];
+}
+export interface IFooterLink {
+    title: string;
+    url: string;
+}

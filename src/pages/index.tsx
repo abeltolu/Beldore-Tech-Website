@@ -15,6 +15,7 @@ import HomePageProjects from '../components/projects/homepage.comp';
 import HomepageAbout from '../components/about/homepage.comp';
 import HomepageContactSection from '../components/homepage/contactsection';
 import HomepageContactForm from '../components/homepage/contactform';
+import Footer from '../components/footer';
 
 const IndexPage = () => (
     <Layout>
@@ -38,6 +39,7 @@ const IndexPage = () => (
             <HomepageContactSection />
             <HomepageContactForm />
         </FormSection>
+        <Footer />
     </Layout>
 );
 

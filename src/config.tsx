@@ -2,7 +2,11 @@ import React from 'react';
 import GithubIcon from './components/icons/github';
 import LinkedInIcon from './components/icons/linkedin';
 import TwitterIcon from './components/icons/twitter';
-import { IProjectProps, IServiceProps } from './types/interface';
+import {
+    IFooterLinkSection,
+    IProjectProps,
+    IServiceProps,
+} from './types/interface';
 import DesignServiceIcon from './components/icons/services/design';
 import DevelopmentServiceIcon from './components/icons/services/development';
 import DevOpsServiceIcon from './components/icons/services/devops';
@@ -118,5 +122,63 @@ export const projectsList: IProjectProps[] = [
         imagePath: 'projects_creative_agency.png',
         tags: ['UI/UX Design', 'Web Development'],
         bgColor: '#6415ff',
+    },
+];
+
+export const footerLinks: IFooterLinkSection[] = [
+    {
+        title: 'Company',
+        links: [
+            {
+                title: 'About',
+                url: '/',
+            },
+            {
+                title: 'Case Studies',
+                url: '/',
+            },
+            {
+                title: 'Contact',
+                url: '/',
+            },
+            {
+                title: 'Careers',
+                url: '/',
+            },
+        ],
+    },
+    {
+        title: 'Services',
+        links: [
+            {
+                title: 'Design',
+                url: '/',
+            },
+            {
+                title: 'Development',
+                url: '/',
+            },
+            {
+                title: 'DevOps',
+                url: '/',
+            },
+            {
+                title: 'Digital Marketing & Strategy',
+                url: '/',
+            },
+        ],
+    },
+    {
+        title: 'Social',
+        links: [
+            {
+                title: 'LinkedIn',
+                url: '/',
+            },
+            {
+                title: 'Twitter',
+                url: '/',
+            },
+        ],
     },
 ];

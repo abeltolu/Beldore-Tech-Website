@@ -14,6 +14,8 @@ const GlobalStyle = createGlobalStyle`
         --green: #56BCA0;
         --light-green: #DEFFF6;
         --bg-black: #1D1D1D;
+        --footer-link-color: #868686;
+        --footer-bg-color: #282828;
         --font-sans: 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
         --fz-xxs: 12px;
         --fz-xs: 14px;
