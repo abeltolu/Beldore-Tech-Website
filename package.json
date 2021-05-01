@@ -24,7 +24,6 @@
     "styled-components": "^5.2.3"
   },
   "devDependencies": {
-    "@types/react": "^17.0.4",
     "@types/styled-components": "^5.1.9",
     "prettier": "2.2.1"
   },
