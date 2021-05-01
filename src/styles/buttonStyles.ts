@@ -3,6 +3,9 @@ import { css } from 'styled-components';
 
 const ButtonStyles = css`
     .button {
+        background: none;
+        border: none;
+        outline: none;
         text-decoration: none;
         border-radius: 4px;
         transition-duration: 250ms;

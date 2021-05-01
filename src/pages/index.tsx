@@ -12,6 +12,9 @@ import WhatWeDo from '../components/services/whatwedo.comp';
 import HomePageHero from '../components/homepage/hero.comp';
 import ProjectsHeader from '../components/homepage/projectsheader.comp';
 import HomePageProjects from '../components/projects/homepage.comp';
+import HomepageAbout from '../components/about/homepage.comp';
+import HomepageContactSection from '../components/homepage/contactsection';
+import HomepageContactForm from '../components/homepage/contactform';
 
 const IndexPage = () => (
     <Layout>
@@ -28,6 +31,13 @@ const IndexPage = () => (
             <ProjectsHeader />
             <HomePageProjects />
         </ProjectsSsection>
+        <AboutSection>
+            <HomepageAbout />
+        </AboutSection>
+        <FormSection>
+            <HomepageContactSection />
+            <HomepageContactForm />
+        </FormSection>
     </Layout>
 );
 
@@ -52,9 +62,27 @@ const ServicesSection = styled.section`
 
 const ProjectsSsection = styled.section`
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background: var(--white);
     position: relative;
+`;
+
+const AboutSection = styled.section`
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    background: var(--white);
+    padding: 100px var(--layout-margin-lr);
+`;
+
+const FormSection = styled.section`
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    background: var(--light-green);
+    padding: 100px var(--layout-margin-lr);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 `;
 
 export default IndexPage;
