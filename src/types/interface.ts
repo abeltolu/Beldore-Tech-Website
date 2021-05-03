@@ -2,6 +2,7 @@ import React from 'react';
 
 export interface IServiceProps {
     key?: number | string;
+    identifier?: number | string;
     title: string;
     description: string;
     icon?: React.ReactElement;

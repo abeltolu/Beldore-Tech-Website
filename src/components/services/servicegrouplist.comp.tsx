@@ -9,6 +9,7 @@ const ServiceGroupList = () => {
             {servicesList.map((service, index) => (
                 <ServiceGroup
                     key={index}
+                    identifier={service.key}
                     icon={service.icon}
                     title={service.title}
                     description={service.description}

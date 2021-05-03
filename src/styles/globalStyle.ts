@@ -49,6 +49,10 @@ const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
         width: 100%;
     }
+
+    html, body {
+        scroll-behavior: smooth;
+    }
     
     *,
     *:before,

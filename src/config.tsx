@@ -240,19 +240,19 @@ export const footerLinks: IFooterLinkSection[] = [
         links: [
             {
                 title: 'Design',
-                url: '/',
+                url: '/services#design',
             },
             {
                 title: 'Development',
-                url: '/',
+                url: '/services#development',
             },
             {
                 title: 'DevOps',
-                url: '/',
+                url: '/services#devops',
             },
             {
                 title: 'Digital Marketing & Strategy',
-                url: '/',
+                url: '/services#marketing',
             },
         ],
     },

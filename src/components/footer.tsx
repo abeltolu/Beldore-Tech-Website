@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import { footerLinks } from '../config';
 import { IFooterLinkSection } from '../types/interface';
 import LogoFavicon from './icons/logo-favicon';
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
 
 const Footer = () => {
     return (
@@ -90,9 +91,14 @@ const FooterLinks: React.FC<IFooterLinkSection> = ({ title, links }) => {
             <div className="links">
                 {links
                     ? links.map((link, index) => (
-                          <Link key={index} to={link.url} className="link">
+                          <AnchorLink
+                              key={index}
+                              to={link.url}
+                              className="link"
+                              stripHash
+                          >
                               {link.title}
-                          </Link>
+                          </AnchorLink>
                       ))
                     : null}
             </div>

@@ -9,9 +9,10 @@ const ServiceGroup: React.FC<IServiceProps> = ({
     description,
     items,
     icon,
+    identifier,
 }) => {
     return (
-        <StWrapper>
+        <StWrapper id={`${identifier}`}>
             {icon}
             <span className="service-title">{title}</span>
             <span className="service-description">{description}</span>
