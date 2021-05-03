@@ -1,10 +1,14 @@
 import React from 'react';
 
 export interface IServiceProps {
-    key: number | string;
+    key?: number | string;
     title: string;
     description: string;
-    icon: React.ReactElement;
+    icon?: React.ReactElement;
+    items?: {
+        title: string;
+        content: string;
+    }[];
 }
 
 export interface ISVGProps {
@@ -21,7 +25,6 @@ export interface IProjectProps {
     tags: string[];
     bgColor?: string;
 }
-
 export interface IFooterLinkSection {
     title: string;
     links: IFooterLink[];

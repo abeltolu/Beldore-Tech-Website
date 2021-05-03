@@ -21,7 +21,7 @@ const IndexPage = () => (
     <Layout>
         <SEO title="Home" />
         <HeroSection>
-            <Header />
+            <Header variant="white" />
             <HomePageHero />
         </HeroSection>
         <ServicesSection>

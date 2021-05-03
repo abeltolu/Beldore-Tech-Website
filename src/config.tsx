@@ -53,6 +53,28 @@ export const servicesList: IServiceProps[] = [
         description:
             'A new website in the style of your company? Or do you prefe completely new visual identity? We bring out the unique style of your company.',
         icon: <DesignServiceIcon width={80} height={80} />,
+        items: [
+            {
+                title: 'Branding',
+                content:
+                    'Our graphic designers can help your business make great impressions and deliver an impact that truly matters through your names, logos, and colours.',
+            },
+            {
+                title: 'Digital Design',
+                content:
+                    'We make tailor-made designs that communicate visually way before words start making an impact.',
+            },
+            {
+                title: 'Illustration',
+                content:
+                    'Be it for product marketing, social media, books, explainers, storyboard, or anything where you feel that the words alone won’t just cut it, let us illustrate your ideas with graphics that intrigue the eyes.',
+            },
+            {
+                title: 'Print Design',
+                content:
+                    'It is one thing to get something digitally right, but it takes skills of another level entirely to get it right on print as well. We understand the demands of the physical medium, be it the colours or the dimensions.',
+            },
+        ],
     },
     {
         key: 'development',
@@ -60,6 +82,23 @@ export const servicesList: IServiceProps[] = [
         description:
             'Your new website, application or internal platform? Our developers create the very best digital solution for your company.',
         icon: <DevelopmentServiceIcon width={80} height={80} />,
+        items: [
+            {
+                title: 'Mobile Development',
+                content:
+                    'Our developers are specialist in building native and cross-platform mobile applications  for Android and iOS. We manage development, testing, deployment to app stores, and continuous delivery to your customers.',
+            },
+            {
+                title: 'Web Development',
+                content:
+                    'A well thought-out web application that scores in all areas? That is the specialty of our developers. We build responsive, scalable enterprise and cloud-based applications for the web.',
+            },
+            {
+                title: 'Product Design',
+                content:
+                    'From idea conceptualization to delivery, we handle wireframing, prototyping, UI/UX design',
+            },
+        ],
     },
     {
         key: 'devops',
@@ -67,6 +106,28 @@ export const servicesList: IServiceProps[] = [
         description:
             'We design, oversee and control your operational processes to ensure that resources are right-sized to serve business workloads in a cost-effective manner.',
         icon: <DevOpsServiceIcon width={80} height={80} />,
+        items: [
+            {
+                title: 'Infrastructure & Operational Management',
+                content:
+                    'We help manage interactions between your cloud and on-premises environments, servers, storage, network, virtualization software and security.',
+            },
+            {
+                title: 'AI Deployments',
+                content:
+                    'We build and deploy containerized AI/ML models within cloud and on-premises applications.',
+            },
+            {
+                title: 'Continuous Integration & Deployment',
+                content:
+                    'We design and implement Continuous Integration (CI) and Continuous Delivery (CD) for software development.',
+            },
+            {
+                title: 'Code Inspection & Integration',
+                content:
+                    'We help aggregate data and gain insights to enhance application and process agility, reliability and security.',
+            },
+        ],
     },
     {
         key: 'marketing',
@@ -74,6 +135,33 @@ export const servicesList: IServiceProps[] = [
         description:
             'Our online advertisements, email campaigns, social media services would help attract your business to its target audience.',
         icon: <MarketingServiceIcon width={80} height={80} />,
+        items: [
+            {
+                title: 'Content Marketing',
+                content:
+                    'Quality content ensures quality visitors. Our content marketers know which type of content works best for you.',
+            },
+            {
+                title: 'Email Marketing',
+                content:
+                    'Your emails should be a source of information and inspiration. Our marketers would ensure its properly optimized and yields conversions.',
+            },
+            {
+                title: 'Social Media Marketing',
+                content:
+                    'Facebook, Twitter, LinkedIn, Snapchat,… Which social media are right for your company, and which ones should you ignore? No two social media platforms are alike, and not every platform is there for everyone. Let us help with your online presence, and hit the arrow where it makes the most impact.',
+            },
+            {
+                title: 'Digital Strategy',
+                content:
+                    'Everything revolves around the digital goals of your business. Together with you, we will look for those goals and see how we will achieve them together.',
+            },
+            {
+                title: 'SEO',
+                content:
+                    "The number 1 position in Google is every entrepreneur's dream. We can help your business occupy that position as optimally as possible.",
+            },
+        ],
     },
 ];
 

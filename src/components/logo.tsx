@@ -1,12 +1,16 @@
 import { Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
-import IconLogo from './icons/logo';
+import { IconLogoBlack, IconLogoWhite } from './icons/logo';
 
-const Logo = () => {
+export type ILogoVariants = 'white' | 'black';
+interface IProps {
+    variant?: ILogoVariants;
+}
+const Logo: React.FC<IProps> = ({ variant = 'black' }) => {
     return (
         <StWrapper to={'/'}>
-            <IconLogo />
+            {variant == 'black' ? <IconLogoBlack /> : <IconLogoWhite />}
         </StWrapper>
     );
 };

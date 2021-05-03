@@ -2,13 +2,16 @@ import { Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
 import { deviceMax } from '../styles/theme';
-import Logo from './logo';
+import Logo, { ILogoVariants } from './logo';
 import Nav from './nav';
 
-const Header = () => (
+interface IHeaderProps {
+    variant?: ILogoVariants;
+}
+const Header: React.FC<IHeaderProps> = ({ variant }) => (
     <StHeader>
-        <Logo />
-        <Nav />
+        <Logo variant={variant} />
+        <Nav variant={variant} />
         <Link to="/contact" className="button button--green button--medium">
             Get in Touch
         </Link>

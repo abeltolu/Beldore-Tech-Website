@@ -2,12 +2,16 @@ import { Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
 import { navLinks } from '../config';
+import { ILogoVariants } from './logo';
 
-const Nav = () => {
+interface INavProps {
+    variant?: ILogoVariants;
+}
+const Nav: React.FC<INavProps> = ({ variant }) => {
     return (
         <StOrderedList>
             {navLinks.map((nav, index) => (
-                <StListItem key={index} to={nav.url}>
+                <StListItem key={index} to={nav.url} color={variant}>
                     {nav.name}
                 </StListItem>
             ))}
@@ -21,8 +25,12 @@ const StOrderedList = styled.nav`
     grid-gap: 60px;
 `;
 
+const colorMaps = {
+    white: 'var(--white)',
+    black: 'var(--black)',
+};
 const StListItem = styled(Link)`
-    color: var(--white);
+    color: ${({ color }) => colorMaps[color] || 'var(--black)'};
     font-size: var(--fz-md);
     font-weight: normal;
     transition-duration: 250ms;

@@ -25,6 +25,7 @@ const GlobalStyle = createGlobalStyle`
         --fz-22: 22px;
         --fz-xl: 24px;
         --fz-36: 36px;
+        --fz-44: 44px;
         --fz-xxl: 48px;
         --fz-56: 56px;
         --nav-height: 120px;
