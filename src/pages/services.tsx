@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Footer from '../components/footer';
 import Header from '../components/header';
+import LetsBuildJumbotron from '../components/jumbotrons/letsbuild';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import ServicesPageHero from '../components/services/hero.comp';
@@ -20,6 +21,7 @@ const ServicesPage = () => {
                 <ServicesHeroImage />
                 <ServiceGroupList />
             </ServiceListSection>
+            <LetsBuildJumbotron />
             <Footer />
         </Layout>
     );
