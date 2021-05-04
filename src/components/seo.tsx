@@ -27,6 +27,7 @@ function SEO({ description, lang, meta, title }) {
 
     const metaDescription = description || site.siteMetadata.description;
     const defaultTitle = site.siteMetadata?.title;
+    const titlePlus = defaultTitle ? `${title} | ${defaultTitle}` : title;
 
     return (
         <Helmet
@@ -42,7 +43,7 @@ function SEO({ description, lang, meta, title }) {
                 },
                 {
                     property: `og:title`,
-                    content: title,
+                    content: titlePlus,
                 },
                 {
                     property: `og:description`,
@@ -62,7 +63,7 @@ function SEO({ description, lang, meta, title }) {
                 },
                 {
                     name: `twitter:title`,
-                    content: title,
+                    content: titlePlus,
                 },
                 {
                     name: `twitter:description`,
