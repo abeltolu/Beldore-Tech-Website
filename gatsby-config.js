@@ -3,6 +3,7 @@ module.exports = {
         title: `Beldore Technologies`,
         description: `We create and build thoughtful digital experiences for the modern world. As a full-service digital agency, we work closely with our clients to define, design and develop transformative user experiences across all platforms and brand’s touchpoints.`,
         author: `@abeltolu`,
+        siteUrl: 'https://beldoretech.com',
     },
     plugins: [
         `gatsby-plugin-styled-components`,

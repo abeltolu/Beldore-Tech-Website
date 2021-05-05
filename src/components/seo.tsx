@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
-function SEO({ description, lang, meta, title }) {
+function SEO({ description, lang, meta, title, imageUrl }) {
     const { site } = useStaticQuery(
         graphql`
             query {
@@ -19,6 +19,7 @@ function SEO({ description, lang, meta, title }) {
                         title
                         description
                         author
+                        siteUrl
                     }
                 }
             }
@@ -28,6 +29,10 @@ function SEO({ description, lang, meta, title }) {
     const metaDescription = description || site.siteMetadata.description;
     const defaultTitle = site.siteMetadata?.title;
     const titlePlus = defaultTitle ? `${title} | ${defaultTitle}` : title;
+    const siteUrl = site.siteMetadata.siteUrl;
+    const ogImage = siteUrl
+        ? `${siteUrl}/${imageUrl || 'images/beldore-icon.png'}`
+        : 'https://beldoretech.com/images/beldore-icon.png';
 
     return (
         <Helmet
@@ -42,6 +47,10 @@ function SEO({ description, lang, meta, title }) {
                     content: metaDescription,
                 },
                 {
+                    property: `image`,
+                    content: ogImage,
+                },
+                {
                     property: `og:title`,
                     content: titlePlus,
                 },
@@ -52,6 +61,10 @@ function SEO({ description, lang, meta, title }) {
                 {
                     property: `og:type`,
                     content: `website`,
+                },
+                {
+                    property: `og:image`,
+                    content: ogImage,
                 },
                 {
                     name: `twitter:card`,
