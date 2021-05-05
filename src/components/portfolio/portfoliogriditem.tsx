@@ -14,7 +14,7 @@ const PortfolioGridItem: React.FC<IPortfolioGrid> = ({
     return (
         <StWrapper className={className}>
             <div className="image">
-                <img src={imageData} width={'100%'} />
+                <img src={imageData} />
             </div>
             <span className="title">{title}</span>
             <span className="description">{description}</span>
@@ -30,6 +30,16 @@ const StWrapper = styled.div`
         width: 100%;
         height: auto;
         margin-bottom: 24px;
+
+        img {
+            width: 100%;
+            transition-duration: 250ms;
+            transition-property: background, box-shadow, color, transform;
+            transition-timing-function: ease-in-out;
+            &:hover {
+                transform: scale(1.03);
+            }
+        }
     }
 
     span.title {
