@@ -9,8 +9,9 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
+import { useGetImage } from '../hooks/useGetImage';
 
-function SEO({ description, lang, meta, title, imageUrl }) {
+function SEO({ description, lang, meta, title }) {
     const { site } = useStaticQuery(
         graphql`
             query {
@@ -26,13 +27,16 @@ function SEO({ description, lang, meta, title, imageUrl }) {
         `
     );
 
+    //icon path
+    const { srcPath } = useGetImage('beldore-icon.png');
+
     const metaDescription = description || site.siteMetadata.description;
     const defaultTitle = site.siteMetadata?.title;
     const titlePlus = defaultTitle ? `${title} | ${defaultTitle}` : title;
     const siteUrl = site.siteMetadata.siteUrl;
     const ogImage = siteUrl
-        ? `${siteUrl}/${imageUrl || 'images/beldore-icon.png'}`
-        : 'https://beldoretech.com/images/beldore-icon.png';
+        ? `${siteUrl}${srcPath}`
+        : `https://beldoretech.com${srcPath}`;
 
     return (
         <Helmet
