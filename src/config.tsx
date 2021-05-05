@@ -11,6 +11,11 @@ import DesignServiceIcon from './components/icons/services/design';
 import DevelopmentServiceIcon from './components/icons/services/development';
 import DevOpsServiceIcon from './components/icons/services/devops';
 import MarketingServiceIcon from './components/icons/services/marketing';
+import BooklifyPNG from './images/projects_booklify.png';
+import CreativeAgencyPNG from './images/projects_creative_agency.png';
+import DivincentiPNG from './images/projects_divincenti.png';
+import FichayaPNG from './images/projects_fichaya.png';
+import FirstWorldPNG from './images/projects_firstworld.png';
 
 export const navLinks = [
     { name: 'Services', url: '/services' },
@@ -167,15 +172,6 @@ export const servicesList: IServiceProps[] = [
 
 export const projectsList: IProjectProps[] = [
     {
-        key: 'booklify',
-        title: 'Booklify',
-        description:
-            'Booklify is an easy appointment scheduler that helps clients schedule meetings without the back-and-forth emails.',
-        imagePath: 'projects_booklify.png',
-        tags: ['UI/UX Design', 'Web Development'],
-        bgColor: '#003767',
-    },
-    {
         key: 'fichaya',
         title: 'Fichaya',
         description:
@@ -183,6 +179,17 @@ export const projectsList: IProjectProps[] = [
         imagePath: 'projects_fichaya.png',
         tags: ['UI/UX Design', 'Web Development'],
         bgColor: '#000b7c',
+        imageData: FichayaPNG,
+    },
+    {
+        key: 'booklify',
+        title: 'Booklify',
+        description:
+            'Booklify is an easy appointment scheduler that helps clients schedule meetings without the back-and-forth emails.',
+        imagePath: 'projects_booklify.png',
+        tags: ['UI/UX Design', 'Web Development'],
+        bgColor: '#003767',
+        imageData: BooklifyPNG,
     },
     {
         key: 'firstworld',
@@ -192,6 +199,7 @@ export const projectsList: IProjectProps[] = [
         imagePath: 'projects_firstworld.png',
         tags: ['UI/UX Design', 'Web Development'],
         bgColor: '#7B2675',
+        imageData: FirstWorldPNG,
     },
     {
         key: 'divincenti',
@@ -201,6 +209,7 @@ export const projectsList: IProjectProps[] = [
         imagePath: 'projects_divincenti.png',
         tags: ['UI/UX Design', 'Web Development'],
         bgColor: '#1F2A5A',
+        imageData: DivincentiPNG,
     },
     {
         key: 'creative-agency',
@@ -210,6 +219,7 @@ export const projectsList: IProjectProps[] = [
         imagePath: 'projects_creative_agency.png',
         tags: ['UI/UX Design', 'Web Development'],
         bgColor: '#6415ff',
+        imageData: CreativeAgencyPNG,
     },
 ];
 

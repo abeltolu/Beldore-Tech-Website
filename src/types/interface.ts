@@ -25,6 +25,7 @@ export interface IProjectProps {
     imagePath: string;
     tags: string[];
     bgColor?: string;
+    imageData?: string;
 }
 export interface IFooterLinkSection {
     title: string;

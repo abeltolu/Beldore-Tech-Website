@@ -22,7 +22,9 @@ const LetsBuildJumbotron = () => {
     );
 };
 
-const StWrapper = styled.div`
+const StWrapper = styled.section`
+    position: relative;
+    width: 100%;
     background: var(--light-green);
     padding: var(--layout-margin-lr);
 
