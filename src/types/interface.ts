@@ -35,3 +35,9 @@ export interface IFooterLink {
     title: string;
     url: string;
 }
+
+export interface IContactInfo {
+    icon: React.ReactNode;
+    title: string;
+    details: string;
+}

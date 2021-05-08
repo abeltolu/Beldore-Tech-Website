@@ -12,7 +12,7 @@ import ProjectsHeader from '../components/homepage/projectsheader.comp';
 import HomePageProjects from '../components/projects/homepage.comp';
 import HomepageAbout from '../components/about/homepage.comp';
 import HomepageContactSection from '../components/homepage/contactsection';
-import HomepageContactForm from '../components/homepage/contactform';
+import HomepageContactForm from '../components/contact/contactform';
 import Footer from '../components/footer';
 
 const IndexPage = () => (
@@ -77,11 +77,11 @@ const AboutSection = styled.section`
 
 const FormSection = styled.section`
     width: 100%;
-    height: 100vh;
     min-height: 100vh;
     background: var(--light-green);
     padding: 100px var(--layout-margin-lr);
     display: grid;
+    align-items: center;
     grid-template-columns: 1fr 1fr;
 `;
 

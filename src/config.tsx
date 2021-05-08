@@ -3,6 +3,7 @@ import GithubIcon from './components/icons/github';
 import LinkedInIcon from './components/icons/linkedin';
 import TwitterIcon from './components/icons/twitter';
 import {
+    IContactInfo,
     IFooterLinkSection,
     IProjectProps,
     IServiceProps,
@@ -16,6 +17,11 @@ import CreativeAgencyPNG from './images/projects_creative_agency.png';
 import DivincentiPNG from './images/projects_divincenti.png';
 import FichayaPNG from './images/projects_fichaya.png';
 import FirstWorldPNG from './images/projects_firstworld.png';
+import {
+    CustomerSupportIcon,
+    OnlineSupportIcon,
+    LocationIcon,
+} from './components/icons/contact';
 
 export const navLinks = [
     { name: 'Services', url: '/services' },
@@ -279,4 +285,34 @@ export const footerLinks: IFooterLinkSection[] = [
             },
         ],
     },
+];
+
+export const contactInfo: Record<string, IContactInfo> = {
+    customerService: {
+        icon: <CustomerSupportIcon />,
+        title: 'Customer Service',
+        details: '+2348178508462',
+    },
+    onlineSupport: {
+        icon: <OnlineSupportIcon />,
+        title: 'Online Support',
+        details: 'hey@beldoretech.com',
+    },
+    /*location: {
+        icon: <LocationIcon />,
+        title: 'Location',
+        details: '50, Olonode Street, Alagomeji, Yaba, Lagos.',
+    },*/
+};
+
+export const contactServices = [
+    'Brand Strategy & Design',
+    'Content Strategy',
+    'Game Development',
+    'Web Development',
+    'Software Development',
+    'Infographics',
+    'UX & UI Design',
+    'App Design & Development',
+    'Digital Marketing',
 ];

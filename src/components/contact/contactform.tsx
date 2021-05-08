@@ -1,16 +1,27 @@
 import React from 'react';
 import styled from 'styled-components';
-import StyledInput from '../form/input';
+import StyledInput, { StyledTextArea } from '../form/input';
 import ArrowLeftIcon from '../icons/arrowleft';
+import { contactServices } from '../../config';
+import StyledSelect from '../form/select';
 
-const HomepageContactForm = () => {
+const ContactForm = () => {
+    const options = contactServices.map((service) => ({
+        value: service,
+        label: service,
+    }));
     return (
         <StWrapper>
             <StFormInputs>
                 <StyledInput placeholder="Full Name" />
                 <StyledInput placeholder="Email Address" />
                 <StyledInput placeholder="Phone Number" />
-                <StyledInput placeholder="About Project" />
+                <StyledSelect
+                    options={options}
+                    isMulti={true}
+                    placeholder="Interested Services"
+                />
+                <StyledTextArea placeholder="Tell us more about your project" />
             </StFormInputs>
 
             <button className="button button--shadow-green button--underlined text-black">
@@ -28,6 +39,7 @@ const StWrapper = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 40px;
 `;
 
 const StFormInputs = styled.div`
@@ -36,4 +48,4 @@ const StFormInputs = styled.div`
     grid-gap: 40px;
 `;
 
-export default HomepageContactForm;
+export default ContactForm;

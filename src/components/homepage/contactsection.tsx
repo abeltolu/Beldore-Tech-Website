@@ -19,7 +19,7 @@ const StFormDetails = styled.div`
     padding: 40px 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 40px;
 `;
 
 export default HomepageContactSection;

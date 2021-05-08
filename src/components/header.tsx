@@ -22,17 +22,19 @@ const StHeader = styled.header`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0px var(--layout-margin-lr);
     position: absolute;
-    width: 100%;
     top: 40px;
+    left: var(--layout-margin-lr);
+    right: var(--layout-margin-lr);
 
     @media ${deviceMax.tablet} {
-        padding: 0px var(--layout-margin-lr-tablet);
+        left: var(--layout-margin-lr-tablet);
+        right: var(--layout-margin-lr-tablet);
     }
 
     @media ${deviceMax.mobileL} {
-        padding: 0px var(--layout-margin-lr-mobile);
+        left: var(--layout-margin-lr-mobile);
+        right: var(--layout-margin-lr-mobile);
     }
 `;
 

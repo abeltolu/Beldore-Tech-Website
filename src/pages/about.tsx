@@ -11,7 +11,7 @@ import LetsBuildJumbotron from '../components/jumbotrons/letsbuild';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
-const ServicesPage = () => {
+const AboutPage = () => {
     return (
         <Layout>
             <SEO title="About" />
@@ -48,4 +48,4 @@ const AboutDetailsSection = styled.section`
     padding: var(--layout-margin-lr);
 `;
 
-export default ServicesPage;
+export default AboutPage;
