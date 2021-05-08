@@ -1,7 +1,46 @@
 import { Link } from 'gatsby';
+import { string } from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 import ArrowLeftIcon from '../icons/arrowleft';
+
+interface ISingleStats {
+    top: string;
+    bottom: string;
+    topColor?: string;
+}
+export const SingleStats: React.FC<ISingleStats> = ({
+    top,
+    bottom,
+    topColor,
+}) => {
+    return (
+        <StSingleStats color={topColor}>
+            <span className="big">{top}</span>
+            <span className="small">{bottom}</span>
+        </StSingleStats>
+    );
+};
+
+const StSingleStats = styled.div`
+    text-align: center;
+    span.big {
+        display: block;
+        font-size: var(--fz-56);
+        color: ${({ color }) => color || 'var(--green)'};
+        font-weight: 500;
+        line-height: 1.3;
+        margin-bottom: 4px;
+    }
+
+    span.small {
+        display: block;
+        font-size: var(--fz-xs);
+        color: var(--light-black);
+        font-weight: normal;
+        line-height: 1.3;
+    }
+`;
 
 const HomepageAbout = () => {
     return (
@@ -13,18 +52,9 @@ const HomepageAbout = () => {
                 user experiences across all platforms and brand’s touchpoints.
             </div>
             <div className="quick-info">
-                <div className="single-info">
-                    <span className="big">15+</span>
-                    <span className="small">Team Strength</span>
-                </div>
-                <div className="single-info">
-                    <span className="big">7 years</span>
-                    <span className="small">Experience</span>
-                </div>
-                <div className="single-info">
-                    <span className="big">50+</span>
-                    <span className="small">Happy Clients</span>
-                </div>
+                <SingleStats top="15+" bottom="Team Strength" />
+                <SingleStats top="7 years" bottom="Experience" />
+                <SingleStats top="50+" bottom="Happy Clients" />
             </div>
             <div className="about-link">
                 <Link
@@ -57,26 +87,6 @@ const StWrapper = styled.div`
     div.quick-info {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-
-        div.single-info {
-            text-align: center;
-            span.big {
-                display: block;
-                font-size: var(--fz-56);
-                color: var(--green);
-                font-weight: 500;
-                line-height: 1.3;
-                margin-bottom: 4px;
-            }
-
-            span.small {
-                display: block;
-                font-size: var(--fz-xs);
-                color: var(--light-black);
-                font-weight: normal;
-                line-height: 1.3;
-            }
-        }
     }
 
     div.about-link {
