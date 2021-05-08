@@ -37,3 +37,22 @@ export const ExpandDown = () => {
         </svg>
     );
 };
+
+export const DoubleDownArrows = () => (
+    <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <path
+            d="M11.0609 19.6174L2.29565 10.7478L0 13.0435L11.0609 24L22.1217 12.9391L19.8261 10.7478L11.0609 19.6174Z"
+            fill="white"
+        />
+        <path
+            d="M22.1217 2.19131L19.8261 0L11.0609 8.76522L2.29565 0L0 2.19131L11.0609 13.1478L22.1217 2.19131Z"
+            fill="white"
+        />
+    </svg>
+);
