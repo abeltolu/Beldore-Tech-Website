@@ -1,8 +1,13 @@
 import React from 'react';
+import { Slide } from 'react-awesome-reveal';
 import styled from 'styled-components';
 
 const ProjectsHeader = () => {
-    return <Stheader className="section-title">Our Latest Projects</Stheader>;
+    return (
+        <Slide direction="right" triggerOnce>
+            <Stheader className="section-title">Our Latest Projects</Stheader>
+        </Slide>
+    );
 };
 
 const Stheader = styled.h2`

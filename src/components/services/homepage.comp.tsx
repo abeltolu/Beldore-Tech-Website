@@ -1,4 +1,5 @@
 import React from 'react';
+import { Slide } from 'react-awesome-reveal';
 import styled from 'styled-components';
 import { IServiceProps } from '../../types/interface';
 
@@ -10,12 +11,14 @@ export const HomePageServices: React.FC<IProps> = ({ services }) => {
     return (
         <StWrapper>
             {services.map(({ icon, title, description, key }) => (
-                <SingleHomePageService
-                    key={key}
-                    icon={icon}
-                    title={title}
-                    description={description}
-                />
+                <Slide key={key} direction="right" triggerOnce>
+                    <SingleHomePageService
+                        key={key}
+                        icon={icon}
+                        title={title}
+                        description={description}
+                    />
+                </Slide>
             ))}
         </StWrapper>
     );

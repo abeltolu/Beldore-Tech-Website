@@ -6,6 +6,7 @@ import { footerLinks } from '../config';
 import { IFooterLinkSection } from '../types/interface';
 import LogoFavicon from './icons/logo-favicon';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
+import { Slide } from 'react-awesome-reveal';
 
 const Footer = () => {
     return (
@@ -13,11 +14,13 @@ const Footer = () => {
             <div className="top">
                 <BusinessDetails />
                 {footerLinks.map((section, index) => (
-                    <FooterLinks
-                        title={section.title}
-                        links={section.links}
-                        key={index}
-                    />
+                    <Slide key={index} direction="up" triggerOnce>
+                        <FooterLinks
+                            title={section.title}
+                            links={section.links}
+                            key={index}
+                        />
+                    </Slide>
                 ))}
             </div>
             <div className="bottom">
@@ -62,11 +65,13 @@ const StRoot = styled.section`
 const BusinessDetails = () => {
     return (
         <StBusinessDetails>
-            <LogoFavicon />
-            <span className="description">
-                We build custom software that allows businesses to meet their
-                needs and constraints.
-            </span>
+            <Slide direction="left" triggerOnce>
+                <LogoFavicon />
+                <span className="description">
+                    We build custom software that allows businesses to meet
+                    their needs and constraints.
+                </span>
+            </Slide>
         </StBusinessDetails>
     );
 };

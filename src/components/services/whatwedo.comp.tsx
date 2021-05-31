@@ -1,25 +1,30 @@
 import { Link } from 'gatsby';
 import React from 'react';
+import { Slide, Zoom } from 'react-awesome-reveal';
 import styled from 'styled-components';
 import ArrowLeftIcon from '../icons/arrowleft';
 
 const WhatWeDo = () => {
     return (
         <StWrapper>
-            <h2 className="section-title">What We Do</h2>
-            <p className="content">
-                At Beldore, We build custom software that allows businesses to
-                meet their needs and constraints. we serve as a strategic
-                partner, and help our clients digitally transform to improve
-                their products, speed up service delivery, increase operational
-                efficiency, and expand to new markets.
-            </p>
+            <Slide direction="left" triggerOnce>
+                <h2 className="section-title">What We Do</h2>
+                <p className="content">
+                    At Beldore, We build custom software that allows businesses
+                    to meet their needs and constraints. we serve as a strategic
+                    partner, and help our clients digitally transform to improve
+                    their products, speed up service delivery, increase
+                    operational efficiency, and expand to new markets.
+                </p>
+            </Slide>
             <Link
                 to="/services"
                 className="button button--shadow-green button--underlined text-black"
             >
-                <span className="text">Our Services</span>
-                <ArrowLeftIcon />
+                <Slide direction="left" triggerOnce>
+                    <span className="text">Our Services</span>
+                    <ArrowLeftIcon />
+                </Slide>
             </Link>
         </StWrapper>
     );

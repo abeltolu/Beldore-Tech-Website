@@ -1,6 +1,7 @@
 import { Link } from 'gatsby';
 import { string } from 'prop-types';
 import React from 'react';
+import { Zoom } from 'react-awesome-reveal';
 import styled from 'styled-components';
 import ArrowLeftIcon from '../icons/arrowleft';
 
@@ -45,24 +46,29 @@ const StSingleStats = styled.div`
 const HomepageAbout = () => {
     return (
         <StWrapper>
-            <div className="overview">
-                We create and build thoughtful digital experiences for the
-                modern world. As a full-service digital agency, we work closely
-                with our clients to define, design and develop transformative
-                user experiences across all platforms and brand’s touchpoints.
-            </div>
-            <div className="quick-info">
-                <SingleStats top="15+" bottom="Team Strength" />
-                <SingleStats top="7 years" bottom="Experience" />
-                <SingleStats top="50+" bottom="Happy Clients" />
-            </div>
+            <Zoom triggerOnce>
+                <div className="overview">
+                    We create and build thoughtful digital experiences for the
+                    modern world. As a full-service digital agency, we work
+                    closely with our clients to define, design and develop
+                    transformative user experiences across all platforms and
+                    brand’s touchpoints.
+                </div>
+                <div className="quick-info">
+                    <SingleStats top="15+" bottom="Team Strength" />
+                    <SingleStats top="7 years" bottom="Experience" />
+                    <SingleStats top="50+" bottom="Happy Clients" />
+                </div>
+            </Zoom>
             <div className="about-link">
                 <Link
                     to="/about"
                     className="button button--shadow-green button--underlined text-black"
                 >
-                    <span className="text">About Beldore</span>
-                    <ArrowLeftIcon />
+                    <Zoom triggerOnce>
+                        <span className="text">About Beldore</span>
+                        <ArrowLeftIcon />
+                    </Zoom>
                 </Link>
             </div>
         </StWrapper>

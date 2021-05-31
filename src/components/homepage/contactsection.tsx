@@ -1,16 +1,19 @@
 import React from 'react';
+import { Slide } from 'react-awesome-reveal';
 import styled from 'styled-components';
 import BigArrow from '../icons/bigarrow.tsx';
 
 const HomepageContactSection = () => {
     return (
         <StFormDetails>
-            <h2 className="section-title">
-                Have a Project?
-                <br />
-                Tell us about it
-            </h2>
-            <BigArrow />
+            <Slide direction="left" triggerOnce>
+                <h2 className="section-title">
+                    Have a Project?
+                    <br />
+                    Tell us about it
+                </h2>
+                <BigArrow />
+            </Slide>
         </StFormDetails>
     );
 };

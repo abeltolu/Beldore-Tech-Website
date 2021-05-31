@@ -1,12 +1,17 @@
 import React from 'react';
+import { Zoom } from 'react-awesome-reveal';
 import styled from 'styled-components';
 
 const HomePageHero = () => {
     return (
-        <HeroText>
-            We inspire businesses to <br />
-            <span className="highlighted">bring innovative ideas to life</span>
-        </HeroText>
+        <Zoom triggerOnce>
+            <HeroText>
+                We inspire businesses to <br />
+                <span className="highlighted">
+                    bring innovative ideas to life
+                </span>
+            </HeroText>
+        </Zoom>
     );
 };
 
